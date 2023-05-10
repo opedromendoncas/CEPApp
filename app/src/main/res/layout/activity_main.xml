@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="25dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/txtCep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:digits="0123456789"
+        android:hint="Insira seu CEP"
+        android:inputType="number"
+        android:textColor="#595959"
+        android:textSize="25sp" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
+            android:padding="12dp"
+            android:text="Buscar CEP"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <TextView
+            android:id="@+id/idEndereco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Endereço:"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/lblCEP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_toRightOf="@+id/idEndereco"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/idNúmero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Número:"
+            android:layout_below="@+id/idEndereco"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/lblNumero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_below="@+id/idEndereco"
+            android:layout_toRightOf="@+id/idNúmero"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/idBairro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bairro:"
+            android:layout_below="@+id/idNúmero"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/lblBairro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_below="@+id/idNúmero"
+            android:layout_toRightOf="@+id/idNúmero"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/idCidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cidade:"
+            android:layout_below="@+id/lblBairro"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/lblCidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_below="@+id/idBairro"
+            android:layout_toRightOf="@+id/idNúmero"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/idEstado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estado:"
+            android:layout_below="@+id/lblCidade"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <Spinner
+            android:id="@+id/idSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_below="@+id/idCidade"
+            android:layout_toRightOf="@+id/idEstado"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/idComplemento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complemento:"
+            android:layout_below="@+id/idSpinner"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/lblComplemento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_below="@+id/idEstado"
+            android:layout_toRightOf="@+id/idComplemento"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/idCadastrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/idComplemento"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:text="Cadastrar"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/idAlterar"
+            android:layout_marginLeft="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/idComplemento"
+            android:layout_toRightOf="@+id/idCadastrar"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:text="Alterar"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/idExcluir"
+            android:layout_marginLeft="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/idComplemento"
+            android:layout_toRightOf="@+id/idAlterar"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:text="Excluir"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/idLimpar"
+            android:layout_marginLeft="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/idComplemento"
+            android:layout_toRightOf="@+id/idExcluir"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:text="Limpar"
+            android:textSize="15sp" />
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+        
+
+
+
+
+</LinearLayout>
